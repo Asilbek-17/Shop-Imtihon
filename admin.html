@@ -9,7 +9,15 @@
     <title>Admin</title>
 </head>
 <body>
-    <div class="container1">
+    <header class="site-header">
+        <div class="container1">
+            <nav class="site-nav">
+                <a class="logo-link" href="./index.html"><img class="logo-img" src="./images/Apple_logo_black.svg" alt="Site logo"><p class="m-0 logo-text">UZ</p></a>
+                <a href="https://asilbek-17.netlify.app/" target="blank">My Portfolio</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container1 pt-5">
         <h2 class="text-center mt-5 mb-5 site-title">Add Your Product</h2>
         <form class="js-form d-flex align-items-center flex-wrap flex-column" autocomplete="off">
             <input class="form-control w-50 product-name admin-inp" type="text" name="product_name" placeholder="Enter Your Product Nmae">
@@ -28,12 +36,12 @@
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
-                <div class="modal-body ">
-                    <form class="js-form-put d-flex align-items-center flex-wrap" autocomplete="off">
-                        <input class="form-control w-50 product-name-put" type="text" name="product_name" placeholder="Enter Your Product Nmae">
-                        <input class="form-control w-50 product-desc-put" type="text" name="product_desc" placeholder="Enter Your Product Description">
-                        <input class="form-control w-50 product-img-put" type="file" name="product_img" placeholder="Enter Your Product Image Link">
-                        <input class="form-control w-50 product-price-put" type="number" name="product_price" placeholder="Enter Your Product Price">
+                <div class="modal-body">
+                    <form class="js-form-put d-flex flex-column justify-content-center align-items-center flex-wrap" autocomplete="off">
+                        <input class="form-control w-50 product-name-put mb-3" type="text" name="product_name" placeholder="Enter Your Product Nmae">
+                        <input class="form-control w-50 product-desc-put mb-3" type="text" name="product_desc" placeholder="Enter Your Product Description">
+                        <input class="form-control w-50 product-img-put mb-3" type="file" name="product_img" placeholder="Enter Your Product Image Link">
+                        <input class="form-control w-50 product-price-put mb-3" type="number" name="product_price" placeholder="Enter Your Product Price">
                         <button class="btn btn-outline-dark edit-btn" type="submit">Submit</button>
                     </form>
                 </div>
@@ -49,8 +57,11 @@
                 <p class="product-desc1"></p>
                 <p class="product-price1"></p>
             </div>
-            <button class="btn-edit btn btn-outline-info ms-3" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="tt7026230">edit</button>
-            <button class="btn-delete btn btn-outline-danger" type="button">delete</button>
+            <div class="link-box d-flex align-items-center">
+                <a class="d-inline-block text-end ms-3" href="./order-admin.html">Order Admin</a>
+                <button class="btn-edit ms-auto" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="tt7026230"></button>
+                <button class="btn-delete ms-3" type="button"></button>
+            </div>
         </li>
     </template>
     

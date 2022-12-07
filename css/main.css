@@ -301,3 +301,42 @@ body{
   left: 0;
   z-index: 10;
 }
+
+.btn-delete {
+  width: 30px;
+  height: 30px;
+  background-image: url("../images/delete.svg");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-color: transparent;
+  border: none;
+}
+
+.btn-edit {
+  width: 30px;
+  height: 30px;
+  background-image: url("../images/edit.svg");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-color: transparent;
+  border: none;
+}
+
+.order-btn {
+  width: 30px;
+  height: 30px;
+  background-image: url("../images/delete.svg");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-color: transparent;
+  border: none;
+}
+
+.modal-content {
+  border-radius: 20px;
+}
+
+.modal-body {
+  background-color: gold;
+  border-radius: 20px;
+}

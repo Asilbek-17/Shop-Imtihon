@@ -21,7 +21,7 @@ function renderProduct(arr) {
         const newTemplate = elTemplate.cloneNode("true");
 
 
-        newTemplate.querySelector(".order-btn").dataset.id = item.id;
+        newTemplate.querySelector(".order-btn1").dataset.id = item.id;
         newTemplate.querySelector(".product-image").src = `http://localhost:5001/${item.product_img}`;
         newTemplate.querySelector(".product-image").alt = item.product_name;
         newTemplate.querySelector(".product-title").textContent = item.product_name;
@@ -99,7 +99,7 @@ elSearchForm.addEventListener("submit", function(evt){
 })
 
 elList.addEventListener("click", function(evt) {
-    if(evt.target.matches(".order-btn")) {
+    if(evt.target.matches(".order-btn1")) {
         const btnId = evt.target.dataset.id;
         createOrder(btnId);
         window.location.pathname = "/order.html"
