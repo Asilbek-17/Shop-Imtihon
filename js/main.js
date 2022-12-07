@@ -22,7 +22,7 @@ function renderProduct(arr) {
 
 
         newTemplate.querySelector(".order-btn1").dataset.id = item.id;
-        newTemplate.querySelector(".product-image").src = `http://localhost:5001/${item.product_img}`;
+        newTemplate.querySelector(".product-image").src = `http://localhost:5000/${item.product_img}`;
         newTemplate.querySelector(".product-image").alt = item.product_name;
         newTemplate.querySelector(".product-title").textContent = item.product_name;
         newTemplate.querySelector(".product-desc1").textContent = item.product_desc;
@@ -35,7 +35,7 @@ function renderProduct(arr) {
 
 async function getPosts() {
     try {
-        const rec = await fetch("http://localhost:5001/product", {
+        const rec = await fetch("http://localhost:5000/product", {
         method: "GET",
         headers: {
             Authorization: loginToken,
@@ -59,7 +59,7 @@ function createOrder(id) {
     
     async function createOrderFetch() {
         try {
-            const rec = await fetch("http://localhost:5001/order", {
+            const rec = await fetch("http://localhost:5000/order", {
             method: "POST",
             headers: {
                 Authorization: loginToken,

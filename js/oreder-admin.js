@@ -13,7 +13,7 @@ function renderProductOrder(arr) {
     arr.forEach(item => {
         const newTemplate = elTemplate.cloneNode("true");
         
-        newTemplate.querySelector(".product-image").src = `http://localhost:5001/${item.product_img}`;
+        newTemplate.querySelector(".product-image").src = `http://localhost:5000/${item.product_img}`;
         newTemplate.querySelector(".product-image").alt = item.product_name;
         newTemplate.querySelector(".product-title").textContent = item.product_name;
         newTemplate.querySelector(".product-price1").textContent = "User Name : " + item.user_name;
@@ -25,7 +25,7 @@ function renderProductOrder(arr) {
 
 async function getOrder() {
     try {
-        const rec = await fetch("http://localhost:5001/order", {
+        const rec = await fetch("http://localhost:5000/order", {
         method: "GET",
         headers: {
             Authorization: loginToken,

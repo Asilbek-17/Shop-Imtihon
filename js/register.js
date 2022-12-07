@@ -16,7 +16,7 @@ const elBtneys = document.querySelector(".btn-koz2");
 
 async function registerUser() {  
     try {
-        const res = await fetch("http://localhost:5001/user/register" , {
+        const res = await fetch("http://localhost:5000/user/register" , {
         method: "POST",
         
         headers: {

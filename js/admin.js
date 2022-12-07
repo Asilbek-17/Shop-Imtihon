@@ -29,7 +29,7 @@ function renderProduct(arr) {
         newTemplate.querySelector(".product-item").dataset.id = item.id;
         newTemplate.querySelector(".btn-edit").dataset.editId = item.id;
         newTemplate.querySelector(".btn-delete").dataset.deleteId = item.id;
-        newTemplate.querySelector(".product-image").src = `http://localhost:5001/${item.product_img}`;
+        newTemplate.querySelector(".product-image").src = `http://localhost:5000/${item.product_img}`;
         newTemplate.querySelector(".product-image").alt = item.product_name;
         newTemplate.querySelector(".product-title").textContent = item.product_name;
         newTemplate.querySelector(".product-desc1").textContent = item.product_desc;
@@ -50,7 +50,7 @@ function createProduct() {
     
     async function createProductFetch() {
         try {
-            const rec = await fetch("http://localhost:5001/product", {
+            const rec = await fetch("http://localhost:5000/product", {
             method: "POST",
             headers: {
                 Authorization: loginToken,
@@ -77,7 +77,7 @@ function editProduct(id) {
     
     async function editProductFetch(edidId) {
         try {
-            const rec = await fetch(`http://localhost:5001/product/${edidId}`, {
+            const rec = await fetch(`http://localhost:5000/product/${edidId}`, {
             method: "PUT",
             headers: {
                 Authorization: loginToken,
@@ -96,7 +96,7 @@ editProductFetch(id)
 
 async function getPosts() {
     try {
-        const rec = await fetch("http://localhost:5001/product", {
+        const rec = await fetch("http://localhost:5000/product", {
         method: "GET",
         headers: {
             Authorization: loginToken,
@@ -114,7 +114,7 @@ async function getPosts() {
 
 async function deletePosts(id) {
     try {
-        const rec = await fetch(`http://localhost:5001/product/${id}`, {
+        const rec = await fetch(`http://localhost:5000/product/${id}`, {
         method: "DELETE",
         headers: {
             Authorization: loginToken,

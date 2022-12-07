@@ -14,7 +14,7 @@ async function loginPost() {
     const elInpEmailValue = elInpEmail.value;
     const elInpPasswordValue = elInpPassword.value.trim();
     try {
-        const res = await fetch("http://localhost:5001/user/login", {
+        const res = await fetch("http://localhost:5000/user/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
